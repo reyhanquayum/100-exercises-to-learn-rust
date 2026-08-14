@@ -23,6 +23,13 @@ You can use `//` for single-line comments:
 // Followed by another single-line comment
 ```
 
+```rust
+fn nice_to_meet_you() -> () {
+    println!("Hello");
+    return ();
+}
+```
+
 ## Functions
 
 Functions in Rust are defined using the `fn` keyword, followed by the function's name, its input parameters, and its
@@ -35,7 +42,7 @@ In previous exercise, you saw the `greeting` function:
 // `fn` <function_name> ( <input params> ) -> <return_type> { <body> }
 fn greeting() -> &'static str {
     // TODO: fix me 👇
-    "I'm ready to __!"
+    return "I'm ready to __!"
 }
 ```
 
