@@ -1,8 +1,8 @@
 mod ticket {
-    struct Ticket {
-        title: String,
-        description: String,
-        status: String,
+    pub struct Ticket {
+        pub(crate) title: String,
+        pub(crate) description: String,
+        pub(crate) status: String,
     }
 
     impl Ticket {
@@ -44,7 +44,7 @@ mod tests {
     // visibility to make the use statement compile!
     // Once you have verified that it indeed doesn't compile, comment it out.
     fn should_not_be_possible() {
-        let ticket = Ticket::new("A title".into(), "A description".into(), "To-Do".into());
+        // let ticket = Ticket::new("A title".into(), "A description".into(), "To-Do".into());
 
         // You should be seeing this error when trying to run this exercise:
         //
@@ -55,7 +55,7 @@ mod tests {
         //
         // TODO: Once you have verified that the below does not compile,
         //   comment the line out to move on to the next exercise!
-        assert_eq!(ticket.description, "A description");
+        // assert_eq!(ticket.description, "A description");
     }
 
     fn encapsulation_cannot_be_violated() {
